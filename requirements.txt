@@ -4,3 +4,5 @@ accelerate==0.30.1
 bitsandbytes==0.43.1
 torch==2.3.0
 scipy==1.13.1
+faiss-cpu==1.8.0
+sentence-transformers==2.7.0
