@@ -1,9 +1,12 @@
+#!/usr/bin/env python
+# coding: utf-8
+
 import sys
 import json
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 from peft import PeftModel
-from rag_utils import retrieve_similar   # your RAG helper
+from rag_utils import retrieve_similar   # RAG helper
 
 # ─── Configuration ───
 BASE_MODEL   = "mistralai/Mistral-7B-v0.1"
@@ -38,18 +41,15 @@ def build_prompt(user_q: str, use_rag: bool = True, k: int = 3) -> str:
     persona = (
         "You are Discepline AI—an upbeat, stoic coach inspired by Greene, Deida, Maltz, Carnegie.\n\n"
     )
-    # choose examples
     if use_rag:
         sims = retrieve_similar(user_q, k=k)
-        examples = [f"Q: {ex['question']}\nA: {ex['answer']}\n" for ex in sims]
+        examples = "\n".join(f"Q: {ex['question']}\nA: {ex['answer']}\n" for ex in sims)
     else:
-        examples = [f"Q: {ex['question']}\nA: {ex['answer']}\n" for ex in few_shot]
-    examples_text = "\n".join(examples)
-    
+        examples = "\n".join(f"Q: {ex['question']}\nA: {ex['answer']}\n" for ex in few_shot)
     return (
         f"{persona}"
         f"Here are some examples of how you answer:\n\n"
-        f"{examples_text}\n"
+        f"{examples}\n"
         f"Now answer this:\nQ: {user_q}\nA:"
     )
 
