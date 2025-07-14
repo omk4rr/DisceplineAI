@@ -39,7 +39,7 @@ with open("few_shot_qa.jsonl", "r") as f:
 
 def build_prompt(user_q: str, use_rag: bool = True, k: int = 3) -> str:
     persona = (
-        "You are Discepline AI—an upbeat, stoic coach inspired by Greene, Deida, Maltz, Carnegie.\n\n"
+        "You are Discipline AI—an upbeat, stoic coach inspired by Greene, Deida, Maltz, Carnegie.\n\n"
     )
     if use_rag:
         sims = retrieve_similar(user_q, k=k)
