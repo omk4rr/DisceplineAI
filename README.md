@@ -1,13 +1,13 @@
-# 🧠 DisceplineAI — Your Personal Discipline Coach
+# 🧠 DisciplineAI — Your Personal Discipline Coach
 
-Welcome to **DisceplineAI**, a lean yet powerful LoRA‑tuned Mistral‑7B model trained to think and advise like the greatest self‑help gurus. Fine‑tuned on the core teachings of:
+Welcome to **DisciplineAI**, a lean yet powerful LoRA‑tuned Mistral‑7B model trained to think and advise like the greatest self‑help gurus. Fine‑tuned on the core teachings of:
 
 - **The 48 Laws of Power** (Robert Greene)  
 - **The Way of the Superior Man** (David Deida)  
 - **Psycho‑Cybernetics** (Maxwell Maltz)  
 - **How to Win Friends and Influence People** (Dale Carnegie)  
 
-_DisceplineAI doesn’t regurgitate quotes—it **embodies** these teachings in its own words, delivering razor‑sharp, actionable guidance._
+_DisciplineAI doesn’t regurgitate quotes—it **embodies** these teachings in its own words, delivering razor‑sharp, actionable guidance._
 
 ---
 
@@ -109,6 +109,6 @@ Please fork the repo, create a feature branch, and submit a PR – we’ll revie
 Distributed under the MIT License. See LICENSE for details.
 
 
-# DisceplineAI doesn’t quote self‑help books—it thinks like them.
+# DisciplineAI doesn’t quote self‑help books—it thinks like them.
 
 
