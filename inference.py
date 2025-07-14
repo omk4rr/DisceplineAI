@@ -10,7 +10,7 @@ from rag_utils import retrieve_similar   # RAG helper
 
 # ─── Configuration ───
 BASE_MODEL   = "mistralai/Mistral-7B-v0.1"
-ADAPTER_REPO = "omk4rr/DiceplineAI"
+ADAPTER_REPO = "omk4rr/DiciplineAI"
 DEVICE       = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ─── 4‑bit Quant Config ───
@@ -80,7 +80,7 @@ def main():
     if not prompt:
         prompt = "How can I build discipline to stay consistent every day?"
     answer = ask_discepline(prompt, use_rag=True)
-    print(f"\n🧠 Discepline AI:\n{answer}\n")
+    print(f"\n🧠 Discipline AI:\n{answer}\n")
 
 if __name__ == "__main__":
     main()
