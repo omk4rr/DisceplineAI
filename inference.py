@@ -10,7 +10,7 @@ from rag_utils import retrieve_similar   # RAG helper
 
 # ─── Configuration ───
 BASE_MODEL   = "mistralai/Mistral-7B-v0.1"
-ADAPTER_REPO = "omk4rr/DiciplineAI"
+ADAPTER_REPO = "omk4rr/DisciplineAI"
 DEVICE       = "cuda" if torch.cuda.is_available() else "cpu"
 
 # ─── 4‑bit Quant Config ───
